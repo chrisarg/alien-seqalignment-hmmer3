@@ -2,16 +2,16 @@ use strict;
 use warnings;
 
 package Alien::SeqAlignment::hmmer3;
-$Alien::SeqAlignment::hmmer3::VERSION = '0.01';
+$Alien::SeqAlignment::hmmer3::VERSION = '0.02';
 use parent qw( Alien::Base );
 use Carp;
 our $AUTOLOAD;
 
 sub AUTOLOAD {
-    my $self = shift;
+    my ($self) = @_;
     our $AUTOLOAD;
-    my $method = $AUTOLOAD =~ s/.*::(\w+)$//;
-
+    $AUTOLOAD =~ s/.*::(\w+)$//;
+    my $method = $1;
     unless ( exists $self->runtime_prop->{command}->{$method} ) {
         croak "Method $method not found";
     }
@@ -62,24 +62,29 @@ HMMER3 SUITE
 
 EASEL SUITE
 
-  system Alien::SeqAlignment::hmmer3->alimask       (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmalign      (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmbuild      (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmconvert    (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmemit       (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmfetch      (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmlogo       (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmpgmd       (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmpgmd_shard (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmpress      (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmsearch     (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmsim        (parameters & options);
-  system Alien::SeqAlignment::hmmer3->hmmstat       (parameters & options);
-  system Alien::SeqAlignment::hmmer3->jackhmmer     (parameters & options);
-  system Alien::SeqAlignment::hmmer3->makehmmerdb   (parameters & options);
-  system Alien::SeqAlignment::hmmer3->nhmmer        (parameters & options);
-  system Alien::SeqAlignment::hmmer3->nhmmscan      (parameters & options);
-  system Alien::SeqAlignment::hmmer3->phmmer        (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_afetch     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alimanip   (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alimap     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->asl_alimask    (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alimerge   (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alipid     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alirev     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_alistat    (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_compalign  (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_compstruct (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_construct  (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_histplot   (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_mask       (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_mixdchlet  (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_reformat   (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_selectn    (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_seqrange   (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_seqstat    (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_sfetch     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_shuffle    (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_ssdraw     (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_translate  (parameters & options);
+  system Alien::SeqAlignment::hmmer3->esl_weight     (parameters & options);
 
 =head1 DESCRIPTION
 
