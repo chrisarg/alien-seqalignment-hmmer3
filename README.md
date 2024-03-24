@@ -2,6 +2,10 @@
 
 Alien::SeqAlignment::hmmer3 - find, build and install the hmmer3 tools
 
+# VERSION
+
+version 0.03
+
 # SYNOPSIS
 
 To execute the hmmer3 set of tools, you can use the following code:
@@ -327,6 +331,11 @@ esl_seqstat - summarize contents of a sequence file
 - [Alien::Build::Manual::AlienUser](https://metacpan.org/dist/Alien-Build/view/lib/Alien/Build/Manual/AlienUser.pod)
 
     Detailed manual for users of Alien classes.
+
+- [Bio::SeqAlignment](https://metacpan.org/pod/Bio::SeqAlignment)
+
+    A collection of tools and libraries for aligning biological sequences 
+    from within Perl. 
 
 # AUTHOR
 

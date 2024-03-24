@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package Alien::SeqAlignment::hmmer3;
-$Alien::SeqAlignment::hmmer3::VERSION = '0.02';
+$Alien::SeqAlignment::hmmer3::VERSION = '0.03';
 use parent qw( Alien::Base );
 use Carp;
 our $AUTOLOAD;
@@ -28,6 +28,10 @@ sub AUTOLOAD {
 =head1 NAME
 
 Alien::SeqAlignment::hmmer3 - find, build and install the hmmer3 tools
+
+=head1 VERSION
+
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -357,6 +361,11 @@ the static and the dynamic edlib library in your code.
 =item * L<Alien::Build::Manual::AlienUser|https://metacpan.org/dist/Alien-Build/view/lib/Alien/Build/Manual/AlienUser.pod>
 
 Detailed manual for users of Alien classes.
+
+=item * L<Bio::SeqAlignment|https://metacpan.org/pod/Bio::SeqAlignment>
+
+A collection of tools and libraries for aligning biological sequences 
+from within Perl. 
 
 =back
 

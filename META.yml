@@ -30,7 +30,7 @@ no_index:
 provides:
   Alien::SeqAlignment::hmmer3:
     file: lib/Alien/SeqAlignment/hmmer3.pm
-    version: '0.02'
+    version: '0.03'
 requires:
   Alien::Base: '0.038'
   Carp: '0'
@@ -41,7 +41,7 @@ resources:
   IRC: irc://irc.perl.org/#native
   homepage: https://github.com/chrisarg/alien-seqalignment-hmmer3
   repository: https://github.com/chrisarg/alien-seqalignment-hmmer3.git
-version: '0.02'
+version: '0.03'
 x_alienfile:
   generated_by: 'Dist::Zilla::Plugin::AlienBuild version 0.32'
   requires:
